@@ -44,9 +44,7 @@ public class GameMapHandler {
      */
     private void removeFill() {
         for (int i = map.length - 1; i >= 0; i--) {
-            int[] ints = map[i];
-            boolean b = fill(ints);
-            if (b) {
+            if (fill(map[i])) {
                 removeLine(i);
                 i++;
             }
